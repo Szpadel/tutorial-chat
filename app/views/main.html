@@ -1,0 +1,43 @@
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+        <li class="active"><a ng-href="#">Home</a></li>
+        <li><a ng-href="#">About</a></li>
+        <li><a ng-href="#">Contact</a></li>
+    </ul>
+    <h3 class="text-muted">tutorial chat</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                </div>
+                <div class="panel-body">
+                    <ul class="chat">
+                        <message message="message" ng-repeat="message in main.messages"></message>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <form ng-submit="main.sendMsg()">
+                        <div class="input-group">
+                            <input ng-model="main.newMessage" id="btn-input" type="text" class="form-control input-sm"
+                                   placeholder="Type your message here...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-sm" id="btn-chat">
+                                    Send
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <p>♥ from the Yeoman team</p>
+</div>
